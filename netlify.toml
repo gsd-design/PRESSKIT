@@ -1,0 +1,17 @@
+# Configuration Netlify : site statique, index.html à la racine, aucun build.
+[build]
+  publish = "."
+
+# Cache long pour les médias. Si tu remplaces une image en gardant le même nom,
+# vide le cache dans Netlify (Deploys → Trigger deploy → Clear cache and deploy).
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
