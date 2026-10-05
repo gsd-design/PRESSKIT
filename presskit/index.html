@@ -395,16 +395,21 @@ section { position: relative; }
 }
 
 /* ============================================================
-   EXTRAITS LIVE (vidéo verticale, cadre jaune comme la photo de la bio)
+   EXTRAITS LIVE (vidéos verticales, cadre jaune comme la photo de la bio)
    La section est sombre et enchaîne directement sur la galerie.
+   Mobile : rangée à faire défiler ; à partir de 720 px : trois vidéos côte à côte sous le titre.
    ============================================================ */
 .live { padding-bottom: 0; }
 .live.torn-top::before { --edge: url("/assets/edge-5.svg"); }
 .live .container { position: relative; z-index: 2; }
-.live-grid { display: grid; gap: clamp(32px, 5vw, 72px); align-items: center; }
-.live-text .section-head { margin-bottom: 28px; max-width: 560px; }
 .live-text h2 span { color: var(--c-yellow); }
-.live-frame { position: relative; width: min(100% - 24px, 320px); margin: 0 auto 12px; }
+.live-list {
+  display: flex; gap: 28px; margin: 0 calc(-1 * var(--gutter)); padding: 0 calc(var(--gutter) + 12px) 22px var(--gutter); list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.live-list::-webkit-scrollbar { display: none; }
+.live-item { flex: 0 0 min(70vw, 300px); scroll-snap-align: center; }
+.live-frame { position: relative; }
 .live-frame::before { content: ""; position: absolute; inset: 16px -12px -12px 12px; background: var(--c-yellow); border-radius: 18px; }
 .live-player { position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 30px 70px rgba(0,0,0,.6); }
 .live-player video { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -415,17 +420,19 @@ section { position: relative; }
   color: #fff;
 }
 .live-play span {
-  display: grid; place-items: center; width: 84px; height: 84px; border-radius: 50%;
+  display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%;
   background: var(--c-yellow); color: #0c0c0c; box-shadow: 0 10px 40px rgba(0,0,0,.5);
   transition: transform .2s ease;
 }
 .live-play:hover span { transform: scale(1.08); }
 .live-play:focus-visible { outline: 3px solid var(--c-yellow); outline-offset: -6px; }
-.live-play svg { width: 34px; height: 34px; margin-left: 4px; }
+.live-play svg { width: 30px; height: 30px; margin-left: 4px; }
 .live-player.is-playing .live-play { display: none; }
-@media (min-width: 900px) {
-  .live-grid { grid-template-columns: .8fr 1.2fr; }
-  .live-frame { order: -1; width: min(100% - 24px, 340px); margin: 0 0 12px; }
+.live-caption { margin: 28px 0 0; }
+.live-caption strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.1; text-transform: uppercase; }
+.live-caption span { display: block; margin-top: 6px; color: var(--c-muted); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+@media (min-width: 720px) {
+  .live-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3.4vw, 44px); margin: 0; padding: 0 12px 12px 0; overflow: visible; }
 }
 
 /* ============================================================
@@ -672,35 +679,64 @@ section { position: relative; }
   </section>
 
   <!-- ============================================================
-       EXTRAITS LIVE — MODIFIER ICI : vidéo (/assets/live-dubreggae.mp4), vignette
-       (/assets/live-dubreggae-poster.jpg) et titre.
+       EXTRAITS LIVE — vidéos verticales auto-hébergées (/assets/live-*.mp4, 540x960)
+       avec leur vignette (/assets/live-*-poster.jpg).
        ============================================================ -->
   <section class="section dark live torn-top" id="live">
     <div class="container">
-      <div class="live-grid">
-        <div class="live-text reveal">
-          <div class="section-head">
-            <span class="overline">Extrait live · 2026</span>
-            <h2 class="display">En live :<br><span>la batterie en direct</span></h2>
-            <p>Un extrait filmé sur scène pendant un set, caméras au plus près de la batterie : les platines, la batterie acoustique jouée en direct et le public.</p>
-          </div>
-          <a class="btn btn-primary" href="#live" data-play-live>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-            Lancer l’extrait
-          </a>
-        </div>
-        <div class="live-frame reveal">
-          <div class="live-player" id="live-player">
-            <video controls preload="none" playsinline poster="/assets/live-dubreggae-poster.jpg" width="540" height="960" aria-label="Extrait live de Nolan GSD : dub reggae avec batterie jouée en direct">
-              <source src="/assets/live-dubreggae.mp4" type="video/mp4">
-              Votre navigateur ne peut pas lire cette vidéo. <a href="/assets/live-dubreggae.mp4">Télécharger l’extrait</a>.
-            </video>
-            <button class="live-play" type="button" data-play-live aria-label="Lire l’extrait live">
-              <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-            </button>
-          </div>
+      <div class="live-text reveal">
+        <div class="section-head">
+          <span class="overline">Extraits live · 2026</span>
+          <h2 class="display">En live :<br><span>la batterie en direct</span></h2>
+          <p>Trois extraits filmés pendant les sets : deux sur scène, caméras au plus près de la batterie, et un depuis le public.</p>
         </div>
       </div>
+      <!-- MODIFIER ICI : un bloc « live-item » par extrait (vidéo, vignette, titre, légende).
+           Pour ajouter un extrait : copier un bloc et changer les fichiers dans /assets/. -->
+      <ul class="live-list reveal">
+        <li class="live-item">
+          <div class="live-frame">
+            <div class="live-player">
+              <video controls preload="none" playsinline poster="/assets/live-beggin-poster.jpg" width="540" height="960" aria-label="Extrait live de Nolan GSD : reprise de Beggin’ avec batterie jouée en direct, filmé sur scène">
+                <source src="/assets/live-beggin.mp4" type="video/mp4">
+                Votre navigateur ne peut pas lire cette vidéo. <a href="/assets/live-beggin.mp4">Télécharger l’extrait</a>.
+              </video>
+              <button class="live-play" type="button" aria-label="Lire l’extrait : Beggin’">
+                <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+              </button>
+            </div>
+          </div>
+          <p class="live-caption"><strong>Beggin’</strong><span>Vu de la scène · 0:52</span></p>
+        </li>
+        <li class="live-item">
+          <div class="live-frame">
+            <div class="live-player">
+              <video controls preload="none" playsinline poster="/assets/live-dubreggae-poster.jpg" width="540" height="960" aria-label="Extrait live de Nolan GSD : dub reggae avec batterie jouée en direct, filmé sur scène">
+                <source src="/assets/live-dubreggae.mp4" type="video/mp4">
+                Votre navigateur ne peut pas lire cette vidéo. <a href="/assets/live-dubreggae.mp4">Télécharger l’extrait</a>.
+              </video>
+              <button class="live-play" type="button" aria-label="Lire l’extrait : Dub reggae">
+                <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+              </button>
+            </div>
+          </div>
+          <p class="live-caption"><strong>Dub reggae</strong><span>Vu de la scène · 0:35</span></p>
+        </li>
+        <li class="live-item">
+          <div class="live-frame">
+            <div class="live-player">
+              <video controls preload="none" playsinline poster="/assets/live-final-drum-poster.jpg" width="540" height="960" aria-label="Extrait live de Nolan GSD : final à la batterie, filmé depuis le public">
+                <source src="/assets/live-final-drum.mp4" type="video/mp4">
+                Votre navigateur ne peut pas lire cette vidéo. <a href="/assets/live-final-drum.mp4">Télécharger l’extrait</a>.
+              </video>
+              <button class="live-play" type="button" aria-label="Lire l’extrait : Final à la batterie">
+                <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+              </button>
+            </div>
+          </div>
+          <p class="live-caption"><strong>Final à la batterie</strong><span>Vu du public · 2:07</span></p>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -971,22 +1007,22 @@ section { position: relative; }
   video.addEventListener('play', function () { player.classList.add('is-playing'); });
   video.addEventListener('ended', function () { player.classList.remove('is-playing'); });
 
-  /* --- Extrait live : lecture au clic (bouton de la section et bouton sur la vidéo) --- */
-  var livePlayer = document.getElementById('live-player');
-  var liveVideo = livePlayer.querySelector('video');
-  function playLive(e) {
-    e.preventDefault();
-    livePlayer.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
-    livePlayer.classList.add('is-playing');
-    var p = liveVideo.play();
-    if (p && p.catch) p.catch(function () { livePlayer.classList.remove('is-playing'); });
-  }
-  document.querySelectorAll('[data-play-live]').forEach(function (b) { b.addEventListener('click', playLive); });
-  liveVideo.addEventListener('play', function () { livePlayer.classList.add('is-playing'); });
-  liveVideo.addEventListener('ended', function () { livePlayer.classList.remove('is-playing'); });
-  /* Une seule vidéo à la fois : lancer l'une met l'autre en pause */
-  video.addEventListener('play', function () { liveVideo.pause(); });
-  liveVideo.addEventListener('play', function () { video.pause(); });
+  /* --- Extraits live : lecture au clic, une seule vidéo à la fois (teaser compris) --- */
+  var allVideos = [video];
+  document.querySelectorAll('.live-player').forEach(function (lp) {
+    var v = lp.querySelector('video');
+    allVideos.push(v);
+    lp.querySelector('.live-play').addEventListener('click', function () {
+      lp.classList.add('is-playing');
+      var p = v.play();
+      if (p && p.catch) p.catch(function () { lp.classList.remove('is-playing'); });
+    });
+    v.addEventListener('play', function () { lp.classList.add('is-playing'); });
+    v.addEventListener('ended', function () { lp.classList.remove('is-playing'); });
+  });
+  allVideos.forEach(function (v) {
+    v.addEventListener('play', function () { allVideos.forEach(function (o) { if (o !== v) o.pause(); }); });
+  });
 
   /* --- Lightbox --- */
   var box = document.getElementById('lightbox');
