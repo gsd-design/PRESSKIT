@@ -431,7 +431,6 @@ section { position: relative; }
 .live-player.is-playing .live-play { display: none; }
 .live-caption { margin: 28px 0 0; }
 .live-caption strong, .live-now strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.1; text-transform: uppercase; }
-.live-caption span, .live-now span { display: block; margin-top: 6px; color: var(--c-muted); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 @media (min-width: 720px) {
   .live-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3.4vw, 44px); margin: 0; padding: 0 12px 12px 0; overflow: visible; }
 }
@@ -734,10 +733,9 @@ section { position: relative; }
           <div class="section-head">
             <span class="overline">Extraits live · 2026</span>
             <h2 class="display">En live :<br><span>la batterie en direct</span></h2>
-            <p>Trois extraits filmés pendant les sets : deux sur scène, caméras au plus près de la batterie, et un depuis le public.</p>
           </div>
         </div>
-        <!-- MODIFIER ICI : un bloc « live-item » par extrait (vidéo, vignette, titre, légende).
+        <!-- MODIFIER ICI : un bloc « live-item » par extrait (vidéo, vignette, titre).
              Pour ajouter un extrait : copier un bloc et changer les fichiers dans /assets/.
              Les extraits s'affichent en pile de cartes : on glisse celle du dessus pour passer à la suivante. -->
         <div class="live-stage reveal">
@@ -754,7 +752,7 @@ section { position: relative; }
                   </button>
                 </div>
               </div>
-              <p class="live-caption"><strong>Beggin’</strong><span>Vu de la scène · 0:52</span></p>
+              <p class="live-caption"><strong>Beggin’</strong></p>
             </li>
             <li class="live-item">
               <div class="live-frame">
@@ -768,7 +766,7 @@ section { position: relative; }
                   </button>
                 </div>
               </div>
-              <p class="live-caption"><strong>Dub reggae</strong><span>Vu de la scène · 0:35</span></p>
+              <p class="live-caption"><strong>Dub reggae</strong></p>
             </li>
             <li class="live-item">
               <div class="live-frame">
@@ -782,7 +780,7 @@ section { position: relative; }
                   </button>
                 </div>
               </div>
-              <p class="live-caption"><strong>Final à la batterie</strong><span>Vu du public · 2:07</span></p>
+              <p class="live-caption"><strong>Final à la batterie</strong></p>
             </li>
           </ul>
           <div class="live-nav" hidden>
