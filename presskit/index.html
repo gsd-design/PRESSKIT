@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     NOLAN GSD — presskit 2027 (page /presskit du site)
+     Tout le contenu se modifie directement dans ce fichier.
+     Cherche les commentaires « MODIFIER ICI » pour trouver rapidement
+     les textes, liens, avis, collaborations, etc.
+     Les couleurs et polices sont dans :root (juste en dessous, dans <style>).
+     ============================================================ -->
+
+<!-- MODIFIER ICI : titre et description (Google, onglet du navigateur, aperçu de lien) -->
+<title>Nolan GSD — Presskit 2027 · DJ set live avec batterie · Festivals</title>
+<meta name="description" content="Nolan GSD, 20 ans, DJ et batteur en Mayenne : un show live platines + batterie acoustique pour les festivals du Grand Ouest. Teaser, bio, festivals, galerie, presse et contact booking.">
+<meta name="theme-color" content="#0c0c0c">
+
+<!-- MODIFIER ICI : Open Graph (aperçu WhatsApp / Instagram / Messenger).
+     Les aperçus exigent des URL absolues. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Nolan GSD">
+<meta property="og:title" content="Nolan GSD — Presskit 2027 · DJ set live avec batterie">
+<meta property="og:description" content="Platines + batterie acoustique : un show live électro et techno pour les festivals du Grand Ouest. Presskit 2027, teaser, galerie et contact booking.">
+<meta property="og:url" content="https://nolangsd.fr/presskit/">
+<meta property="og:image" content="https://nolangsd.fr/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://nolangsd.fr/presskit/">
+
+<link rel="icon" href="/assets/logo-nolan-gsd.svg" type="image/svg+xml">
+<!-- Police : Nohemi (fichier variable auto-hébergé dans /assets/fonts/, aucune dépendance externe) -->
+<link rel="preload" href="/assets/fonts/Nohemi-VF.ttf" as="font" type="font/ttf" crossorigin>
+
+<style>
+/* ============================================================
+   VARIABLES — MODIFIER ICI : couleurs et polices du site
+   ============================================================ */
+:root {
+  --c-yellow: #f0cf41;        /* jaune échantillonné sur le PDF */
+  --c-yellow-dark: #d9b52a;   /* jaune plus foncé (survol) */
+  --c-black: #0c0c0c;         /* fond sombre principal */
+  --c-black-2: #161616;       /* cartes sur fond sombre */
+  --c-ink: #0c0c0c;           /* texte sur fond clair */
+  --c-paper: #ffffff;         /* sections claires */
+  --c-muted: #8f8f8f;         /* texte secondaire */
+  --c-line: rgba(255,255,255,.12);
+
+  --font-display: "Nohemi", "Archivo", "Helvetica Neue", Arial, sans-serif;   /* titres */
+  --font-body: "Nohemi", "Helvetica Neue", Arial, sans-serif;                 /* texte */
+
+  --container: 1140px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section-y: clamp(64px, 9vw, 120px);
+  --edge-h: clamp(22px, 4.6vw, 70px);       /* hauteur des bords déchirés */
+  --nav-h: 68px;
+  --grain: url("/assets/grain.webp");
+}
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("/assets/fonts/Nohemi-VF.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 8px); -webkit-text-size-adjust: 100%; overflow-x: clip; }
+body {
+  margin: 0;
+  background: var(--c-black) var(--grain) center top / 1000px auto repeat;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(15px, 1.05vw, 17px);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-weight: 400; }
+p { margin: 0 0 1em; }
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Titres */
+.display { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; line-height: .95; letter-spacing: -.01em; }
+h2.display { font-size: clamp(34px, 5.2vw, 66px); }
+.overline {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--c-yellow);
+  font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+}
+.section-head { max-width: 720px; margin-bottom: clamp(32px, 5vw, 56px); }
+.section-head p { margin: 16px 0 0; color: var(--c-muted); font-size: 1.05em; }
+.paper .section-head p { color: #444; }
+
+/* Boutons (zone de tap ≥ 48 px) */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; padding: 0 26px;
+  border-radius: 999px; border: 2px solid transparent;
+  font-family: var(--font-body); font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:focus-visible { outline: 3px solid var(--c-yellow); outline-offset: 3px; }
+.btn-primary { background: var(--c-yellow); color: #0c0c0c; }
+.btn-primary:hover { background: var(--c-yellow-dark); }
+.btn-ghost { border-color: rgba(255,255,255,.45); color: #fff; }
+.btn-ghost:hover { border-color: #fff; }
+.btn-dark { background: var(--c-ink); color: #fff; }
+.btn-dark:hover { background: #2a2a2a; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+@media (max-width: 420px) { .btn { padding: 0 18px; font-size: 13px; letter-spacing: .05em; } }
+
+/* Sections */
+section { position: relative; }
+.section { padding: var(--section-y) 0; }
+.paper { background: var(--c-paper); color: var(--c-ink); }
+.dark { color: #fff; }
+
+/* Bords déchirés : contours extraits du PDF (/assets/edge-*.svg), texture grain */
+.torn-top::before, .torn-bottom::after {
+  content: "";
+  position: absolute; left: 0; right: 0;
+  height: var(--edge-h);
+  background: var(--c-black) var(--grain) center top / 1000px auto repeat;
+  -webkit-mask: var(--edge) 0 0 / 100% 100% no-repeat;
+          mask: var(--edge) 0 0 / 100% 100% no-repeat;
+  pointer-events: none; z-index: 3;
+}
+.torn-top::before  { bottom: 100%; margin-bottom: -1px; --edge: var(--edge-top); }
+.torn-bottom::after { top: 100%;   margin-top: -1px;    --edge: var(--edge-bottom); }
+
+/* Apparition des sections au scroll */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-content .container > * { animation: none; }
+  .btn:hover { transform: none; }
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  height: var(--nav-h);
+  transition: background-color .3s ease, border-color .3s ease;
+  border-bottom: 1px solid transparent;
+}
+.nav.is-scrolled, .nav.is-open { background: rgba(12,12,12,.92); border-color: var(--c-line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.nav .container { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.nav-logo { display: flex; align-items: center; min-height: 44px; opacity: 0; transform: translateY(-6px); transition: opacity .35s ease, transform .35s ease; }
+.nav.is-scrolled .nav-logo, .nav.is-open .nav-logo { opacity: 1; transform: none; }
+.nav-logo img { width: 150px; height: auto; }
+.nav-links { display: flex; align-items: center; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.nav-links a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px;
+  color: rgba(255,255,255,.85); font-size: 14px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; text-decoration: none;
+  border-radius: 8px;
+}
+.nav-links a:hover, .nav-links a:focus-visible { color: var(--c-yellow); outline: none; }
+.nav-links .nav-cta { margin-left: 10px; min-height: 44px; padding: 0 20px; }
+.nav-burger {
+  display: none; width: 48px; height: 48px; border: 0; background: transparent; color: #fff; cursor: pointer; border-radius: 10px;
+}
+.nav-burger:focus-visible { outline: 3px solid var(--c-yellow); }
+.nav-burger span { display: block; width: 24px; height: 2px; margin: 5px auto; background: currentColor; transition: transform .25s ease, opacity .25s ease; }
+.nav.is-open .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav.is-open .nav-burger span:nth-child(2) { opacity: 0; }
+.nav.is-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 899px) {
+  .nav-burger { display: block; }
+  .nav-links {
+    position: fixed; inset: var(--nav-h) 0 0 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    padding: 24px var(--gutter) 40px;
+    background: rgba(12,12,12,.97);
+    opacity: 0; visibility: hidden; transform: translateY(-10px);
+    transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+    overflow-y: auto;
+  }
+  .nav.is-open .nav-links { opacity: 1; visibility: visible; transform: none; transition: opacity .25s ease, transform .25s ease; }
+  .nav-links a { min-height: 56px; padding: 0 8px; border-bottom: 1px solid var(--c-line); border-radius: 0; font-family: var(--font-display); font-size: 26px; letter-spacing: 0; font-weight: 700; }
+  .nav-links .nav-cta { margin: 24px 0 0; border: 0; border-radius: 999px; justify-content: center; font-family: var(--font-body); font-size: 15px; min-height: 52px; }
+}
+
+/* ============================================================
+   1. HERO : photo plein écran, logo centré par-dessus
+   ============================================================ */
+.hero { position: relative; background: var(--c-black); min-height: 100vh; min-height: 100svh; display: flex; align-items: center; }
+/* overflow sur le média seulement : sur .hero, il couperait le bord déchiré du bas */
+.hero-media { position: absolute; inset: 0; overflow: hidden; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; }
+.hero-media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(12,12,12,.85) 0%, rgba(12,12,12,.35) 45%, rgba(12,12,12,.25) 100%);
+}
+.hero-content { position: relative; z-index: 2; width: 100%; padding: calc(var(--nav-h) + 24px) var(--gutter) clamp(72px, 10vw, 120px); text-align: center; }
+.hero-content .container { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.hero-label { margin: 0; color: var(--c-yellow); font-size: 13px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; }
+.hero-brand { margin: 0; width: min(100%, clamp(280px, 60vw, 820px)); }
+.hero-logo { width: 100%; height: auto; filter: drop-shadow(0 8px 30px rgba(0,0,0,.55)); }
+.hero-tagline { margin: 6px 0 4px; color: rgba(255,255,255,.9); font-size: clamp(16px, 1.5vw, 21px); font-weight: 500; letter-spacing: .04em; }
+.hero-tagline .dot { color: var(--c-yellow); margin: 0 .35em; }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.hero-pdf { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: rgba(255,255,255,.75); font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; }
+.hero-pdf:hover { color: var(--c-yellow); }
+.hero-pdf svg { width: 16px; height: 16px; }
+.hero.torn-bottom::after { --edge: url("/assets/edge-2.svg"); }
+@media (max-width: 767px) {
+  .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
+  .g-tile img { aspect-ratio: 4 / 3; }
+}
+/* Apparition orchestrée au chargement */
+@keyframes hero-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.hero-content .container > * { animation: hero-in .8s cubic-bezier(.2,.7,.2,1) both; }
+.hero-content .container > :nth-child(1) { animation-delay: .05s; }
+.hero-content .container > :nth-child(2) { animation-delay: .18s; }
+.hero-content .container > :nth-child(3) { animation-delay: .3s; }
+.hero-content .container > :nth-child(4) { animation-delay: .4s; }
+.hero-content .container > :nth-child(5) { animation-delay: .5s; }
+@media (prefers-reduced-motion: reduce) { .hero-content .container > * { animation: none; } }
+
+/* ============================================================
+   2. BIO
+   ============================================================ */
+.bio { background: linear-gradient(rgba(255,255,255,.86), rgba(255,255,255,.86)), url("/assets/bio-bg.webp") center / cover no-repeat, var(--c-paper); }
+.bio-grid { display: grid; gap: clamp(32px, 5vw, 64px); align-items: start; }
+.bio-text p { font-size: clamp(16px, 1.15vw, 18px); line-height: 1.7; color: #1d1d1d; }
+.bio-text p:first-of-type { font-size: clamp(17px, 1.3vw, 20px); font-weight: 600; color: var(--c-ink); }
+.bio-photo { position: relative; margin: 0; }
+.bio-frame { position: relative; }
+.bio-frame::before { content: ""; position: absolute; inset: 16px -12px -12px 12px; background: var(--c-yellow); border-radius: 6px; z-index: 0; }
+.bio-photo img { position: relative; z-index: 1; width: 100%; border-radius: 6px; box-shadow: 0 24px 60px rgba(0,0,0,.25); }
+.bio-photo figcaption { margin-top: 26px; font-size: 13px; color: #555; }
+@media (min-width: 900px) {
+  .bio-grid { grid-template-columns: 1.15fr .85fr; }
+  .bio-photo { margin-top: 8px; }
+}
+
+/* ============================================================
+   3. COLLABORATIONS
+   ============================================================ */
+.collabs .section-head { max-width: none; text-align: center; margin-left: auto; margin-right: auto; }
+.collabs h2 { color: var(--c-ink); }
+.collab-list {
+  max-width: 900px; margin: 0 auto; padding: 0; list-style: none;
+  text-align: center; text-transform: uppercase;
+  font-size: clamp(15px, 1.6vw, 22px); line-height: 1.5; letter-spacing: .02em;
+}
+.collab-list li { padding: .15em 0; }
+.collab-list b { font-weight: 600; }
+.collab-list span { font-weight: 400; color: #333; }
+.collab-list .sep { display: inline-block; margin: 0 .5em; color: var(--c-yellow-dark); font-weight: 700; }
+@media (max-width: 559px) { .collab-list .sep { display: block; height: 0; overflow: hidden; margin: 0; } }
+
+/* ============================================================
+   4. AVIS
+   ============================================================ */
+.avis-grid { display: grid; gap: 20px; }
+@media (min-width: 800px) { .avis-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
+.review {
+  display: flex; flex-direction: column; gap: 16px;
+  padding: clamp(22px, 3vw, 32px);
+  background: #1b1b1f; color: #eaeaea; border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.18);
+}
+.review-head { display: flex; align-items: center; gap: 14px; }
+.avatar { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 20px; color: #fff; }
+.review-who strong { display: block; font-size: 16px; color: #fff; }
+.review-who span { display: block; font-size: 13px; color: #a8a8a8; }
+.stars { display: flex; align-items: center; gap: 4px; color: #fbbc04; }
+.stars svg { width: 18px; height: 18px; }
+.stars small { margin-left: 8px; color: #a8a8a8; font-size: 13px; }
+.review blockquote { margin: 0; font-size: 15px; line-height: 1.65; }
+.review blockquote p:last-child { margin-bottom: 0; }
+.review-foot { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.1); font-size: 13px; color: #a8a8a8; }
+.review-foot .g { font-weight: 700; color: #fff; letter-spacing: .02em; }
+
+/* ============================================================
+   5. PRESSE
+   ============================================================ */
+.press-grid { display: grid; gap: 20px; }
+@media (min-width: 720px) { .press-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
+.press-item {
+  display: flex; flex-direction: column; text-decoration: none; color: inherit;
+  border-radius: 14px; overflow: hidden; background: #f3f3f3; border: 1px solid rgba(0,0,0,.08);
+}
+.press-item:focus-visible { outline: 3px solid var(--c-yellow); outline-offset: 2px; }
+.press-media { display: block; overflow: hidden; background: #e6e6e6; }
+.press-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.press-body { display: flex; flex-direction: column; gap: 8px; padding: 18px 20px 20px; }
+.press-body small { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #777; }
+.press-body strong { font-size: clamp(16px, 1.3vw, 19px); font-weight: 600; line-height: 1.35; color: var(--c-ink); }
+.press-body em { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; font-style: normal; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--c-ink); }
+.press-body em svg { width: 16px; height: 16px; transition: transform .25s ease; }
+.press-item:hover .press-body em { color: var(--c-yellow-dark); }
+.press-item:hover .press-body em svg { transform: translate(2px, -2px); }
+
+/* ============================================================
+   6. CONTACT
+   ============================================================ */
+.contact { background: #050505; }
+.contact-bg { position: absolute; inset: 0; overflow: hidden; background: url("/assets/contact-bg.webp") center 30% / cover no-repeat; opacity: .38; }
+.contact-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(5,5,5,.2), rgba(5,5,5,.75)); }
+.contact .container { position: relative; z-index: 2; }
+.contact-grid { display: grid; gap: clamp(32px, 5vw, 72px); align-items: center; }
+@media (min-width: 900px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+.contact-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.contact-card {
+  display: flex; align-items: center; gap: 18px;
+  min-height: 76px; padding: 14px 18px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 16px;
+  text-decoration: none; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  transition: border-color .25s ease, background-color .25s ease, transform .25s ease;
+}
+.contact-card:hover { border-color: var(--c-yellow); background: rgba(255,255,255,.1); transform: translateX(4px); }
+.contact-card:focus-visible { outline: 3px solid var(--c-yellow); outline-offset: 2px; }
+.contact-icon { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--c-yellow); color: #0c0c0c; }
+.contact-icon svg { width: 22px; height: 22px; }
+.contact-card small { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--c-muted); }
+.contact-card strong { display: block; font-size: clamp(16px, 1.4vw, 20px); font-weight: 600; word-break: break-word; }
+.contact-more { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px; }
+.phones { position: relative; width: min(100%, 440px); aspect-ratio: 900 / 1180; margin: 0 auto; }
+.phones a { position: absolute; display: block; }
+.phones img { width: 100%; filter: drop-shadow(0 30px 40px rgba(0,0,0,.6)); }
+.phone-insta { left: 0; top: 0; width: 100%; }
+.phone-tiktok { left: 45%; top: 39%; width: 56%; }
+@media (min-width: 900px) { .phones { width: min(100%, 520px); margin: 0 0 0 auto; } }
+
+
+/* ============================================================
+   TEASER (vidéo verticale)
+   ============================================================ */
+.teaser.torn-top::before { --edge: url("/assets/edge-3.svg"); }
+.teaser.torn-bottom::after { --edge: url("/assets/edge-4.svg"); }
+.teaser { background: var(--c-black) var(--grain) center top / 1000px auto repeat; }
+.teaser .container { position: relative; z-index: 2; }
+.teaser-grid { display: grid; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.teaser-text .section-head { margin-bottom: 28px; max-width: 560px; }
+.teaser-text h2 span { color: var(--c-yellow); }
+.teaser-player {
+  position: relative; z-index: 1; width: min(100%, 360px); margin: 0 auto;
+  aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden;
+  background: #000;
+  box-shadow: 0 40px 90px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08);
+}
+.teaser-player video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.teaser-play {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  display: grid; place-items: center; border: 0; padding: 0; cursor: pointer;
+  background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.05) 50%);
+  color: #fff;
+}
+.teaser-play span {
+  display: grid; place-items: center; width: 84px; height: 84px; border-radius: 50%;
+  background: var(--c-yellow); color: #0c0c0c; box-shadow: 0 10px 40px rgba(0,0,0,.5);
+  transition: transform .2s ease;
+}
+.teaser-play:hover span { transform: scale(1.08); }
+.teaser-play svg { width: 34px; height: 34px; margin-left: 4px; }
+.teaser-player.is-playing .teaser-play { display: none; }
+/* Mobile : la vidéo déborde sur le bord déchiré du bas */
+.teaser-player { margin-bottom: calc(-1 * var(--section-y) - var(--edge-h) * .35); }
+.section.teaser { padding-bottom: calc(var(--section-y) + var(--edge-h) * .35); }
+/* Desktop : la vidéo est incrustée entre les deux bords déchirés */
+@media (min-width: 900px) {
+  .teaser-grid { grid-template-columns: 1.1fr .9fr; }
+  .teaser-player { width: min(100%, 400px); margin: calc(-1 * var(--section-y) - var(--edge-h) * .4) 0 calc(-1 * var(--section-y) - var(--edge-h) * .4) auto; }
+  .section.teaser { padding-bottom: var(--section-y); }
+}
+
+/* ============================================================
+   GALERIE PHOTO
+   ============================================================ */
+.galerie.torn-top::before { --edge: url("/assets/edge-5.svg"); }
+.galerie.torn-bottom::after { --edge: url("/assets/edge-6.svg"); }
+/* Galerie « bento » : une grande image + formats mixtes sur desktop, deux colonnes décalées sur mobile */
+.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.gallery-grid li { position: relative; }
+.gallery-grid li:nth-child(even) { transform: translateY(36px); }
+.gallery-grid a { position: relative; display: block; height: 100%; overflow: hidden; border-radius: 12px; background: var(--c-black-2); cursor: zoom-in; }
+.gallery-grid a:focus-visible { outline: 3px solid var(--c-yellow); outline-offset: 2px; }
+.gallery-grid img { width: 100%; height: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.gallery-grid li.g-tile { grid-column: span 2; transform: none; margin-top: 36px; }
+/* Tuile Instagram : une photo de plus, avec le texte par-dessus */
+.g-tile a { cursor: pointer; }
+.g-tile a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.25) 50%, transparent 100%); }
+.g-tile b { position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 2; font-weight: inherit; color: #fff; }
+.g-tile svg { width: 30px; height: 30px; margin-bottom: 10px; color: var(--c-yellow); }
+.g-tile strong { display: block; font-family: var(--font-display); font-weight: 800; font-size: clamp(20px, 2vw, 28px); line-height: 1; letter-spacing: -.01em; text-transform: uppercase; }
+.g-tile span { display: block; margin-top: 8px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--c-yellow); }
+/* Tuiles vidéo (YouTube) : pleine largeur sur mobile, format cinéma sur desktop */
+.gallery-grid li.g-video { grid-column: span 2; transform: none; }
+.gallery-grid li.g-video:first-of-type { margin-top: 0; }
+.gallery-grid li.g-video img { aspect-ratio: 16 / 9; }
+.g-video a { cursor: pointer; }
+.g-video a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.15) 55%, transparent 100%); }
+.g-video .play { position: absolute; top: 50%; left: 50%; z-index: 2; width: 64px; height: 64px; margin: -32px 0 0 -32px; display: grid; place-items: center; border-radius: 50%; background: var(--c-yellow); color: #000; box-shadow: 0 10px 30px rgba(0,0,0,.5); transition: transform .25s ease; }
+.g-video .play svg { width: 26px; height: 26px; margin: 0 0 0 3px; color: #000; }
+.g-video a:hover .play, .g-video a:focus-visible .play { transform: scale(1.1); }
+.g-video b { position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 2; font-weight: inherit; color: #fff; }
+.g-video strong { display: block; font-family: var(--font-display); font-weight: 800; font-size: clamp(18px, 1.8vw, 24px); line-height: 1; letter-spacing: -.01em; text-transform: uppercase; }
+.g-video span { display: block; margin-top: 6px; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--c-yellow); }
+.gallery-grid li.g-video + li.g-video { margin-top: 0; }
+@media (min-width: 720px) {
+  .gallery-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(150px, 18vw, 260px); gap: 14px; }
+  .gallery-grid li:nth-child(even) { transform: none; }
+  .gallery-grid img { aspect-ratio: auto; }
+  .gallery-grid li:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  .gallery-grid li:nth-child(4) { grid-column: span 2; }
+  .gallery-grid li:nth-child(5) { grid-column: span 2; grid-row: span 2; }
+  .gallery-grid li:nth-child(6) { grid-column: span 2; grid-row: span 2; }
+  .gallery-grid li.g-tile { grid-column: span 2; grid-row: span 2; margin-top: 0; }
+  .gallery-grid li.g-video { grid-column: span 2; grid-row: span 1; }
+  .gallery-grid li.g-video img { aspect-ratio: auto; }
+  .gallery-grid li:nth-child(2) img, .gallery-grid li:nth-child(5) img, .gallery-grid li:nth-child(6) img { object-position: 50% 22%; }
+}
+@media (min-width: 1100px) {
+  .gallery-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: clamp(170px, 15vw, 230px); }
+  .gallery-grid li:nth-child(1) { grid-column: span 3; grid-row: span 2; }
+  .gallery-grid li:nth-child(2) { grid-column: span 2; grid-row: span 1; }
+  .gallery-grid li:nth-child(3) { grid-column: span 1; grid-row: span 2; }
+  .gallery-grid li:nth-child(4) { grid-column: span 2; grid-row: span 1; }
+  .gallery-grid li:nth-child(5) { grid-column: span 2; grid-row: span 2; }
+  .gallery-grid li:nth-child(6) { grid-column: span 2; grid-row: span 2; }
+  .gallery-grid li.g-tile { grid-column: span 2; grid-row: span 2; }
+  .gallery-grid li.g-video { grid-column: span 3; grid-row: span 1; }
+}
+
+/* Contact en bas de page */
+.contact.torn-top::before { --edge: url("/assets/edge-7.svg"); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer { background: #070707; border-top: 1px solid var(--c-line); padding: 28px 0 max(28px, env(safe-area-inset-bottom)); font-size: 13px; color: var(--c-muted); }
+.footer .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 4px 6px; margin: 0; padding: 0; list-style: none; }
+.footer-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; color: #ddd; text-decoration: none; }
+.footer-links a:hover { color: var(--c-yellow); }
+
+/* Lecteurs audio / vidéo (section « Écouter », à décommenter plus bas) */
+.embeds { display: grid; gap: 24px; }
+@media (min-width: 900px) { .embeds { grid-template-columns: 1fr 1fr; } }
+.embed { border-radius: 12px; overflow: hidden; border: 1px solid var(--c-line); background: var(--c-black-2); }
+.embed iframe { display: block; width: 100%; border: 0; }
+.embed-video { aspect-ratio: 16 / 9; }
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lightbox { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 16px; background: rgba(0,0,0,.93); }
+.lightbox.is-open { display: flex; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); border-radius: 6px; box-shadow: 0 10px 60px rgba(0,0,0,.6); }
+.lightbox-video { display: none; width: min(100%, calc((100vh - 32px) * 16 / 9)); width: min(100%, calc((100dvh - 32px) * 16 / 9)); aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: #000; box-shadow: 0 10px 60px rgba(0,0,0,.6); }
+.lightbox-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+.lightbox.is-video img { display: none; }
+.lightbox.is-video .lightbox-video { display: block; }
+.lightbox-close { position: absolute; top: 14px; right: 14px; width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 30px; line-height: 1; cursor: pointer; }
+.lightbox-close:hover, .lightbox-close:focus-visible { background: var(--c-yellow); color: #000; outline: none; }
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     NAVIGATION — MODIFIER ICI : libellés du menu
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a class="nav-logo" href="#top" aria-label="Nolan GSD — retour en haut">
+      <img src="/assets/logo-nolan-gsd-line.svg" width="150" height="21" alt="Nolan GSD">
+    </a>
+    <button class="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#teaser">Teaser</a></li>
+      <li><a href="#collaborations">Festivals</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#presse">Presse</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn btn-primary nav-cta" href="#contact">Me contacter</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================================================
+       1. HERO
+       ============================================================ -->
+  <section class="hero torn-bottom" aria-label="Présentation">
+    <div class="hero-media" aria-hidden="true">
+      <!-- MODIFIER ICI : photo de couverture (/assets/hero-wide.* desktop, /assets/hero-mobile.* mobile) -->
+      <picture>
+        <source media="(min-width: 768px)" srcset="/assets/hero-wide.webp" type="image/webp">
+        <source media="(min-width: 768px)" srcset="/assets/hero-wide.jpg">
+        <source srcset="/assets/hero-mobile.webp" type="image/webp">
+        <img src="/assets/hero-mobile.jpg" width="1000" height="1250" alt="" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+    <div class="hero-content">
+      <div class="container">
+        <!-- MODIFIER ICI : année du presskit -->
+        <p class="hero-label">Presskit 2027</p>
+        <h1 class="hero-brand">
+          <span class="visually-hidden">Nolan GSD</span>
+          <img class="hero-logo" src="/assets/logo-nolan-gsd-line.svg" width="820" height="112" alt="">
+        </h1>
+        <!-- MODIFIER ICI : accroche -->
+        <p class="hero-tagline">DJ set live avec batterie<span class="dot">·</span>Festivals<span class="dot">·</span>Grand Ouest</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#teaser" data-play-teaser>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Voir le teaser
+          </a>
+          <a class="btn btn-ghost" href="#contact">Me contacter</a>
+        </div>
+        <!-- MODIFIER ICI : fichier PDF à télécharger (placé à côté de index.html) -->
+        <a class="hero-pdf" href="/presskit.pdf" download="Presskit-Nolan-GSD-2027.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          Télécharger le presskit (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. BIO — MODIFIER ICI : texte de présentation
+       ============================================================ -->
+  <section class="section paper bio" id="bio">
+    <div class="container">
+      <div class="bio-grid">
+        <div class="bio-text reveal">
+          <div class="section-head">
+            <span class="overline">Biographie</span>
+            <h2 class="display">Bio</h2>
+          </div>
+          <p>À 20 ans, Nolan s’est déjà fait un nom sur la scène du Grand Ouest. Issu d’une famille de musiciens, il grandit avec la musique : d’abord batteur, puis DJ. Son premier concert officiel à 12 ans, à Laval, marque le début d’une aventure où il n’a cessé d’évoluer.</p>
+          <p>À 16 ans, son premier festival change tout. Le DJ set seul ne lui suffit plus : il veut l’énergie d’un concert. Il relie alors platines et batterie acoustique pour créer un show live qui tourne autour de la musique électro et techno.</p>
+          <p>Passionné, humble et déterminé, Nolan est prêt à collaborer avec les festivals et les programmateurs pour faire vivre des moments qui sauront faire la différence.</p>
+
+        </div>
+
+        <figure class="bio-photo reveal">
+          <!-- MODIFIER ICI : photo de la bio (/assets/bio-batterie.webp + .jpg) -->
+          <div class="bio-frame">
+            <picture>
+              <source srcset="/assets/bio-batterie.webp" type="image/webp">
+              <img src="/assets/bio-batterie.jpg" width="900" height="1125" loading="lazy" decoding="async" alt="Nolan GSD derrière sa batterie acoustique sur scène, sous les projecteurs, en noir et blanc">
+            </picture>
+          </div>
+          <figcaption>Platines + batterie acoustique : le show live.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TEASER — MODIFIER ICI : vidéo (/assets/teaser-2027.mp4) et image d'attente (/assets/teaser-poster.webp)
+       Pour une version plus légère, héberger le teaser sur YouTube et remplacer <video> par l'iframe
+       de la section « Écouter » plus bas.
+       ============================================================ -->
+  <section class="section dark teaser torn-top torn-bottom" id="teaser">
+    <div class="container">
+      <div class="teaser-grid">
+        <div class="teaser-text reveal">
+          <div class="section-head">
+            <span class="overline">Teaser 2027</span>
+            <!-- MODIFIER ICI : titre du teaser -->
+            <h2 class="display">DJ set live :<br><span>mix + batterie acoustique</span></h2>
+          </div>
+          <a class="btn btn-primary" href="#teaser" data-play-teaser>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Lancer le teaser
+          </a>
+        </div>
+        <div class="teaser-player reveal" id="teaser-player">
+          <video id="teaser-video" controls preload="metadata" playsinline poster="/assets/teaser-poster.jpg" width="404" height="720" aria-label="Teaser 2027 de Nolan GSD">
+            <source src="/assets/teaser-2027.mp4" type="video/mp4">
+            Votre navigateur ne peut pas lire cette vidéo. <a href="/assets/teaser-2027.mp4">Télécharger le teaser</a>.
+          </video>
+          <button class="teaser-play" type="button" data-play-teaser aria-label="Lire le teaser">
+            <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. DERNIÈRES COLLABORATIONS — MODIFIER ICI : ajouter / retirer un lieu
+       ============================================================ -->
+  <section class="section paper collabs" id="collaborations">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="overline">Festivals</span>
+        <h2 class="display">Dernières collaborations</h2>
+      </div>
+      <!-- Même présentation que le PDF : lieu en gras, ville entre parenthèses.
+           Un <li> = une ligne ; <span class="sep">-</span> sépare deux lieux sur la même ligne. -->
+      <ul class="collab-list reveal">
+        <li><b>Papillons de Nuit</b> <span>(Saint-Laurent-de-Cuves)</span></li>
+        <li><b>Back Alive</b> <span>(Saint-Berthevin-la-Tannière)</span></li>
+        <li><b>Boris le Singe</b> <span>(Louverné)</span></li>
+        <li><b>Festi’Nain</b> <span>(Lassay-les-Châteaux)</span><span class="sep">-</span><b>Festid’Al</b> <span>(Gorron)</span></li>
+        <li><b>Festi’Land</b> <span>(Ernée)</span><span class="sep">-</span><b>Inter BDE</b> <span>(Laval)</span></li>
+        <li><b>Le P’tit Champ</b> <span>(Beaulieu-sur-Oudon)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. GALERIE PHOTO — MODIFIER ICI : ajouter une photo = copier un <li>
+       Chaque photo existe en 2 tailles : /assets/galerie-N.webp (900 px) et /assets/galerie-N-480.webp
+       ============================================================ -->
+  <section class="section dark galerie torn-top torn-bottom" id="galerie">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="overline">Sur scène</span>
+        <h2 class="display">Galerie photo</h2>
+      </div>
+      <ul class="gallery-grid reveal">
+        <li><a href="/assets/galerie-1.webp" data-lightbox><img src="/assets/galerie-1.webp" srcset="/assets/galerie-1-480.webp 480w, /assets/galerie-1.webp 900w" sizes="(min-width: 1100px) 50vw, (min-width: 720px) 50vw, 50vw" width="900" height="1125" loading="lazy" decoding="async" alt="Scène de festival sous les lumières, vue depuis le public"></a></li>
+        <li><a href="/assets/galerie-2.webp" data-lightbox><img src="/assets/galerie-2.webp" srcset="/assets/galerie-2-480.webp 480w, /assets/galerie-2.webp 900w" sizes="(min-width: 1100px) 50vw, (min-width: 720px) 50vw, 50vw" width="900" height="1125" loading="lazy" decoding="async" alt="Nolan GSD dans un faisceau de lumière sur scène, en noir et blanc"></a></li>
+        <li><a href="/assets/galerie-3.webp" data-lightbox><img src="/assets/galerie-3.webp" srcset="/assets/galerie-3-480.webp 480w, /assets/galerie-3.webp 900w" sizes="(min-width: 1100px) 50vw, (min-width: 720px) 50vw, 50vw" width="900" height="1125" loading="lazy" decoding="async" alt="Nolan GSD à la batterie sous une lumière rouge"></a></li>
+        <li><a href="/assets/galerie-4.webp" data-lightbox><img src="/assets/galerie-4.webp" srcset="/assets/galerie-4-480.webp 480w, /assets/galerie-4.webp 900w" sizes="(min-width: 1100px) 50vw, (min-width: 720px) 50vw, 50vw" width="900" height="1125" loading="lazy" decoding="async" alt="Silhouette de Nolan GSD micro en main devant la foule, lumières bleues"></a></li>
+        <li><a href="/assets/galerie-5.webp" data-lightbox><img src="/assets/galerie-5.webp" srcset="/assets/galerie-5-480.webp 480w, /assets/galerie-5.webp 900w" sizes="(min-width: 1100px) 50vw, (min-width: 720px) 50vw, 50vw" width="900" height="1125" loading="lazy" decoding="async" alt="Nolan GSD micro en main derrière les platines, en noir et blanc"></a></li>
+        <li><a href="/assets/galerie-6.webp" data-lightbox><img src="/assets/galerie-6.webp" srcset="/assets/galerie-6-480.webp 480w, /assets/galerie-6.webp 900w" sizes="(min-width: 1100px) 50vw, (min-width: 720px) 50vw, 50vw" width="900" height="1125" loading="lazy" decoding="async" alt="Portrait de Nolan GSD sur scène, lumière bleue"></a></li>
+        <!-- MODIFIER ICI : lien de la tuile Instagram -->
+        <li class="g-tile"><a href="https://www.instagram.com/nolan.gsd" target="_blank" rel="noopener">
+          <img src="/assets/galerie-7.webp" srcset="/assets/galerie-7-480.webp 480w, /assets/galerie-7.webp 900w" sizes="(min-width: 720px) 50vw, 100vw" width="900" height="1125" loading="lazy" decoding="async" alt="Nolan GSD derrière ses platines, dans un faisceau de lumière blanche">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <b><strong>Plus de photos<br>sur Instagram</strong><span>@nolan.gsd ↗</span></b>
+        </a></li>
+        <!-- MODIFIER ICI : vidéos live YouTube. data-video = identifiant de la vidéo,
+             c'est ce qui suit « v= » dans l'adresse (https://www.youtube.com/watch?v=IDENTIFIANT)
+             ou ce qui suit « youtu.be/ ». Le même identifiant sert 3 fois dans chaque bloc.
+             Pour ajouter une vidéo : copier un <li class="g-video"> ; pour en retirer une : supprimer le bloc. -->
+        <!-- VIDÉOS EN ATTENTE : masquées tant que les vrais liens YouTube ne sont pas renseignés.
+        <li class="g-video"><a href="https://www.youtube.com/watch?v=ID-VIDEO-1" data-video="ID-VIDEO-1" target="_blank" rel="noopener">
+          <img src="https://i.ytimg.com/vi/ID-VIDEO-1/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ID-VIDEO-1/hqdefault.jpg'" width="1280" height="720" loading="lazy" decoding="async" alt="Extrait live de Nolan GSD en festival">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <b><strong>Nom du festival</strong><span>Live · 2026</span></b>
+        </a></li>
+        <li class="g-video"><a href="https://www.youtube.com/watch?v=ID-VIDEO-2" data-video="ID-VIDEO-2" target="_blank" rel="noopener">
+          <img src="https://i.ytimg.com/vi/ID-VIDEO-2/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ID-VIDEO-2/hqdefault.jpg'" width="1280" height="720" loading="lazy" decoding="async" alt="Extrait live de Nolan GSD en festival">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <b><strong>Nom du festival</strong><span>Live · 2026</span></b>
+        </a></li>
+        FIN DES VIDÉOS EN ATTENTE -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ÉCOUTER — section prête à l'emploi. Pour l'activer : supprimer la ligne
+       d'ouverture de commentaire juste en dessous (4 caractères) et la ligne de
+       fermeture juste après le bloc (3 caractères), puis remplacer les URL des iframes.
+       ============================================================ -->
+  <!--
+  <section class="section dark ecouter" id="ecouter">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="overline">Sets &amp; vidéos</span>
+        <h2 class="display">Écouter</h2>
+        <p>Un extrait de set et une vidéo live pour se faire une idée de l’ambiance.</p>
+      </div>
+      <div class="embeds reveal">
+        <div class="embed">
+          MODIFIER ICI : lecteur SoundCloud — coller le code d'intégration de SoundCloud (Partager > Intégrer)
+          <iframe height="166" allow="autoplay" title="Set Nolan GSD sur SoundCloud"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/VOTRE-COMPTE/VOTRE-SET&color=%23f0cf41&auto_play=false"></iframe>
+          MODIFIER ICI : ou lecteur Spotify (remplacer l'iframe SoundCloud ci-dessus)
+          <iframe height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Nolan GSD sur Spotify"
+            src="https://open.spotify.com/embed/artist/VOTRE-ID-ARTISTE?utm_source=generator&theme=0"></iframe>
+        </div>
+        <div class="embed embed-video">
+          MODIFIER ICI : vidéo YouTube — remplacer VIDEO_ID par l'identifiant de la vidéo (après « v= » dans l'URL)
+          <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Nolan GSD en live" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ============================================================
+       5. PRESSE — MODIFIER ICI : ajouter un article = copier un <a class="press-item">
+       ============================================================ -->
+  <section class="section paper presse" id="presse">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="overline">Ils ont écrit</span>
+        <h2 class="display">Articles de presse</h2>
+      </div>
+      <!-- MODIFIER ICI : lien, photo et titre de chaque article -->
+      <div class="press-grid reveal">
+        <a class="press-item" href="https://actu.fr/pays-de-la-loire/lassay-les-chateaux_53127/a-17-ans-deja-dj-en-mayenne-rencontre-avec-le-phenomene-nolan-gsd_60644842.html" target="_blank" rel="noopener">
+          <span class="press-media">
+            <picture>
+              <source srcset="/assets/article-1.webp" type="image/webp">
+              <img src="/assets/article-1.jpg" width="900" height="730" loading="lazy" decoding="async" alt="">
+            </picture>
+          </span>
+          <span class="press-body">
+            <small>Le Publicateur Libre · actu.fr · 15 février 2024</small>
+            <strong>« À 17 ans, déjà DJ en Mayenne : rencontre avec le phénomène Nolan GSD »</strong>
+            <em>Lire l’article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></em>
+          </span>
+        </a>
+        <a class="press-item" href="https://www.ouest-france.fr/pays-de-la-loire/gorron-53120/en-mayenne-ce-jeune-dj-de-16-ans-fera-bientot-danser-le-public-du-festidal-a-gorron-f32ee4ba-1f43-11ee-990b-509b31c26799" target="_blank" rel="noopener">
+          <span class="press-media">
+            <picture>
+              <source srcset="/assets/article-2.webp" type="image/webp">
+              <img src="/assets/article-2.jpg" width="754" height="581" loading="lazy" decoding="async" alt="">
+            </picture>
+          </span>
+          <span class="press-body">
+            <small>Ouest-France · Nord-Mayenne · juillet 2023</small>
+            <strong>« En Mayenne, ce jeune DJ de 16 ans fera bientôt danser le public du Festid’Al à Gorron »</strong>
+            <em>Lire l’article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></em>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. CONTACT — MODIFIER ICI : email, téléphone, réseaux
+       ============================================================ -->
+  <section class="section dark contact torn-top" id="contact">
+    <div class="contact-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="section-head">
+            <span class="overline">Booking</span>
+            <h2 class="display">Contact</h2>
+            <p>Festivals, programmateurs, collectivités : envoyez la date, le lieu et la jauge, je reviens vers vous rapidement avec une proposition adaptée.</p>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <a class="contact-card" href="mailto:Nolan.pro53@gmail.com">
+                <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                <span><small>Email</small><strong>Nolan.pro53@gmail.com</strong></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-card" href="tel:+33615100366">
+                <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.9 2.1z"/></svg></span>
+                <span><small>Téléphone</small><strong>06 15 10 03 66</strong></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-card" href="https://www.instagram.com/nolan.gsd" target="_blank" rel="noopener">
+                <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span><small>Instagram</small><strong>@Nolan.gsd</strong></span>
+              </a>
+            </li>
+          </ul>
+          <div class="contact-more">
+            <a class="btn btn-ghost" href="/presskit.pdf" download="Presskit-Nolan-GSD-2027.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+              Presskit PDF
+            </a>
+          </div>
+        </div>
+
+        <div class="phones reveal" aria-label="Réseaux sociaux">
+          <!-- MODIFIER ICI : captures des profils (/assets/phone-instagram.* et /assets/phone-tiktok.*) -->
+          <a class="phone-insta" href="https://www.instagram.com/nolan.gsd" target="_blank" rel="noopener" aria-label="Profil Instagram @nolan.gsd (nouvelle fenêtre)">
+            <picture>
+              <source srcset="/assets/phone-instagram.webp" type="image/webp">
+              <img src="/assets/phone-instagram.png" width="900" height="1001" loading="lazy" decoding="async" alt="Téléphone affichant le profil Instagram NOLAN GSD : 2 658 abonnés, DJ, batteur, clubs, festivals, events privés">
+            </picture>
+          </a>
+          <a class="phone-tiktok" href="https://www.tiktok.com/@nolan.gsd" target="_blank" rel="noopener" aria-label="Profil TikTok @nolan.gsd (nouvelle fenêtre)">
+            <picture>
+              <source srcset="/assets/phone-tiktok.webp" type="image/webp">
+              <img src="/assets/phone-tiktok.png" width="700" height="859" loading="lazy" decoding="async" alt="Téléphone affichant le profil TikTok @nolan.gsd : 5 290 abonnés, 164,1 K j’aime">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================================================
+     FOOTER — MODIFIER ICI : année
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <p style="margin:0">© Nolan GSD 2027 · DJ &amp; batteur · Mayenne, Grand Ouest</p>
+    <ul class="footer-links">
+      <li><a href="mailto:Nolan.pro53@gmail.com">Email</a></li>
+      <li><a href="tel:+33615100366">Téléphone</a></li>
+      <li><a href="https://www.instagram.com/nolan.gsd" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@nolan.gsd" target="_blank" rel="noopener">TikTok</a></li>
+      <li><a href="/presskit.pdf" download="Presskit-Nolan-GSD-2027.pdf">Presskit PDF</a></li>
+      <li><a href="/">nolangsd.fr</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Lightbox (agrandissement des articles) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image ou vidéo agrandie" hidden>
+  <button class="lightbox-close" type="button" aria-label="Fermer">&times;</button>
+  <img src="" alt="">
+  <div class="lightbox-video"><iframe src="about:blank" title="Vidéo live" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+</div>
+
+<script>
+(function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* --- Navigation : fond au scroll --- */
+  var nav = document.getElementById('nav');
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      nav.classList.toggle('is-scrolled', window.scrollY > 24);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* --- Menu burger (mobile) --- */
+  var burger = nav.querySelector('.nav-burger');
+  var links = document.getElementById('nav-links');
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
+  links.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 900) setMenu(false); });
+
+  /* --- Apparition des sections (IntersectionObserver) --- */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    reveals.forEach(function (el) { io.observe(el); });
+  }
+
+
+  /* --- Teaser : lecture au clic (boutons du hero et de la section) --- */
+  var player = document.getElementById('teaser-player');
+  var video = document.getElementById('teaser-video');
+  function playTeaser(e) {
+    e.preventDefault();
+    player.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+    player.classList.add('is-playing');
+    video.muted = false;
+    var p = video.play();
+    if (p && p.catch) p.catch(function () {
+      /* Lecture avec son refusée par le navigateur : on relance en muet, l'utilisateur monte le son */
+      video.muted = true;
+      var q = video.play();
+      if (q && q.catch) q.catch(function () { video.load(); });
+    });
+  }
+  document.querySelectorAll('[data-play-teaser]').forEach(function (b) { b.addEventListener('click', playTeaser); });
+  video.addEventListener('play', function () { player.classList.add('is-playing'); });
+  video.addEventListener('ended', function () { player.classList.remove('is-playing'); });
+
+  /* --- Lightbox --- */
+  var box = document.getElementById('lightbox');
+  var img = box.querySelector('img');
+  var closeBtn = box.querySelector('.lightbox-close');
+  var lastFocus = null;
+  function openBox(link) {
+    var thumb = link.querySelector('img');
+    img.src = link.getAttribute('href');
+    img.alt = thumb ? thumb.alt : '';
+    box.hidden = false; box.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    lastFocus = link; closeBtn.focus();
+  }
+  var frame = box.querySelector('.lightbox-video iframe');
+  function openVideo(link) {
+    var id = link.getAttribute('data-video');
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&modestbranding=1';
+    box.classList.add('is-video');
+    box.hidden = false; box.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    lastFocus = link; closeBtn.focus();
+  }
+  function closeBox() {
+    box.classList.remove('is-open', 'is-video'); box.hidden = true; img.src = ''; frame.src = 'about:blank';
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('a[data-lightbox]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); openBox(a); });
+  });
+  document.querySelectorAll('a[data-video]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); openVideo(a); });
+  });
+  box.addEventListener('click', function (e) { if (!e.target.closest('.lightbox-video')) closeBox(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (box.classList.contains('is-open')) closeBox();
+    else if (nav.classList.contains('is-open')) setMenu(false);
+  });
+})();
+</script>
+</body>
+</html>

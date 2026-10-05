@@ -1,23 +1,24 @@
-# Presskit Nolan GSD 2027 — site one-page
+# Site Nolan GSD — nolangsd.fr
 
-Site statique : un seul fichier `index.html`, les médias dans `assets/`, le PDF `presskit.pdf` à la racine.
-Aucune étape de build : ce qui est dans ce dossier se met en ligne tel quel.
+Site statique, sans étape de build : ce qui est dans ce dossier se met en ligne tel quel.
 
-## Mettre en ligne sur Netlify (le plus rapide)
+| Adresse | Fichier | Contenu |
+|---|---|---|
+| `nolangsd.fr` | `index.html` | Accueil : prochains concerts, vidéos, merch, contact |
+| `nolangsd.fr/presskit` | `presskit/index.html` | Presskit 2027 pour les festivals et programmateurs |
+| `nolangsd.fr/presskit.pdf` | `presskit.pdf` | Le presskit en PDF |
 
-1. Va sur https://app.netlify.com/drop
-2. Glisse le fichier `nolan-gsd-presskit.zip` dans la zone.
-3. Netlify te donne une adresse du type `https://xxxx.netlify.app`. Tu peux la renommer dans *Site configuration → Change site name*.
+Les médias (photos, vidéo, police, bords déchirés) sont dans `assets/` et servent aux deux pages.
 
-## GitHub puis Netlify (pour mettre à jour facilement ensuite)
+## Modifier le contenu
 
-1. Sur GitHub, crée un dépôt (ex. `presskit-2027`), puis *Add file → Upload files* et glisse le contenu du zip décompressé (`index.html`, `assets/`, `presskit.pdf`, `netlify.toml`, `.gitignore`, `README.md`). Commit.
-2. Sur Netlify : *Add new site → Import an existing project → GitHub*, choisis le dépôt.
-   - Build command : laisser vide
-   - Publish directory : `.` (déjà indiqué dans `netlify.toml`)
-3. Chaque modification envoyée sur GitHub remet le site à jour automatiquement.
+Ouvre le fichier de la page concernée : les zones à modifier sont signalées par des commentaires `MODIFIER ICI`.
 
-## Après la mise en ligne
+- **Ajouter une date de concert** : dans `index.html`, section « PROCHAINS CONCERTS ». Le modèle d'une ligne de date est dans le commentaire juste au-dessus.
+- **Ouvrir le merch** : dans `index.html`, section « MERCH », remplacer le bloc « Bientôt disponible » par les articles et le lien de la boutique.
+- **Presskit** : `presskit/index.html` (bio, festivals, galerie, presse, contact).
 
-- Dans `index.html`, remplace `https://VOTRE-DOMAINE` (balises `og:url` et `og:image`, en haut du fichier) par l'adresse réelle du site, pour que l'aperçu s'affiche quand tu partages le lien.
-- Pour changer un texte, une photo ou le PDF, ouvre `index.html` : les zones à modifier sont signalées par des commentaires `MODIFIER ICI`.
+## Mise en ligne
+
+Le site est hébergé sur Netlify (`presskitnolangsd.netlify.app`), avec le domaine `nolangsd.fr` (zone DNS chez OVH).
+Le code est sur GitHub : `gsd-design/PRESSKIT`. Chaque modification envoyée sur la branche `main` met le site à jour si Netlify est relié au dépôt.

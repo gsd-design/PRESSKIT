@@ -1,0 +1,8 @@
+.DS_Store
+.claude/
+captures/
+archive/
+Asset/
+Presskit_pdf/
+*.zip
+nolan-gsd-presskit/
