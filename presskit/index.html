@@ -402,10 +402,8 @@ section { position: relative; }
 .live.torn-top::before { --edge: url("/assets/edge-5.svg"); }
 .live .container { position: relative; z-index: 2; }
 .live-grid { display: grid; gap: clamp(32px, 5vw, 72px); align-items: center; }
-.live-text .section-head { margin-bottom: 22px; max-width: 560px; }
+.live-text .section-head { margin-bottom: 28px; max-width: 560px; }
 .live-text h2 span { color: var(--c-yellow); }
-.live-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
-.live-meta li { padding: 7px 14px 6px; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .1em; line-height: 1.2; text-transform: uppercase; color: #e4e4e4; }
 .live-frame { position: relative; width: min(100% - 24px, 320px); margin: 0 auto 12px; }
 .live-frame::before { content: ""; position: absolute; inset: 16px -12px -12px 12px; background: var(--c-yellow); border-radius: 18px; }
 .live-player { position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 30px 70px rgba(0,0,0,.6); }
@@ -675,7 +673,7 @@ section { position: relative; }
 
   <!-- ============================================================
        EXTRAITS LIVE — MODIFIER ICI : vidéo (/assets/live-dubreggae.mp4), vignette
-       (/assets/live-dubreggae-poster.jpg), titre et étiquettes.
+       (/assets/live-dubreggae-poster.jpg) et titre.
        ============================================================ -->
   <section class="section dark live torn-top" id="live">
     <div class="container">
@@ -686,13 +684,6 @@ section { position: relative; }
             <h2 class="display">En live :<br><span>la batterie en direct</span></h2>
             <p>Un extrait filmé sur scène pendant un set, caméras au plus près de la batterie : les platines, la batterie acoustique jouée en direct et le public.</p>
           </div>
-          <!-- MODIFIER ICI : étiquettes de l'extrait (style, festival, durée) -->
-          <ul class="live-meta">
-            <li>Dub reggae</li>
-            <li>Live drum</li>
-            <li>Festivals 2026</li>
-            <li>0:35</li>
-          </ul>
           <a class="btn btn-primary" href="#live" data-play-live>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
             Lancer l’extrait
